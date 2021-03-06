@@ -1,0 +1,466 @@
+/*FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/*FONTS*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #292b2f;
+  width: 100vw;
+  height: 100vh;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.register main {
+  width: 500px;
+  height: 400px;
+  background-color: #1a1b1e;
+}
+
+.register main .header {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register main .header .title {
+  font-size: 25px;
+  color: white;
+}
+
+.form-group {
+  width: 250px;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.form-group input, select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  margin: 0 auto;
+  outline: none;
+  border-radius: 5px;
+  border: 1px;
+  padding: 2px 10px;
+}
+
+.form-group label {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+}
+
+.register main .header a {
+  width: 120px;
+  height: auto;
+  padding: 8px;
+  border: 0;
+  outline: 0;
+  background-color: yellowgreen;
+  cursor: pointer;
+  margin-top: 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.register main .header a:hover {
+  background-color: #81aa2d;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game main {
+  width: 1200px;
+  height: 700px;
+  background-color: #1a1b1e;
+  display: flex;
+  flex-direction: row;
+}
+
+.game main .left-panel {
+  width: 300px;
+  height: 100%;
+  background-color: #18191b;
+}
+
+.game main .canvas {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.game main .canvas #game {
+  width: 100%;
+  height: 550px;
+}
+
+.game main .canvas .selection-panel {
+  width: 100%;
+  height: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.game main .canvas .selection-panel .option-group {
+  min-width: 60px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.game main .canvas .selection-panel select {
+  width: 10px;
+  height: 40px;
+  border-radius: 0 4px 4px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.game main .canvas .selection-panel #color-preview {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+#size-slider {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 8px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+#size-slider:hover {
+  opacity: 1;
+}
+
+#size-slider::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 10px;
+  height: 30px;
+  background: #4CAF50;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#size-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+#size-info {
+  width: 20px;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 8px;
+}
+
+.draw-theme {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  background-color: #18191b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.game main .canvas .selection-panel ion-icon {
+  color: white;
+  font-size: 40px;
+}
+
+#reset-canvas {
+  pointer-events: none;
+}
+
+.option-icon {
+  color: #4CAF50;
+  font-size: 40px;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.option-icon:hover {
+  opacity: 1;
+}
+
+.chat {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chat .status {
+  width: 100%;
+  height: 50px;
+  background-color: #0f1010;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat .status .server {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  height: 100%;
+  width: 200px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 0 10px;
+}
+
+.chat .status .people {
+  color: lightgray;
+  font-size: 16px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  height: 100%;
+  width: 50px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.chat .feed {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - 140px);
+  box-sizing: border-box;
+}
+
+.chat .feed .message {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 8px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.chat .feed .message .message-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chat .feed .message .message-info .time {
+  color: lightgray;
+  font-size: 14px;
+}
+
+.chat .feed .message .message-info .nick {
+  color: red;
+}
+
+.chat .feed .message .message-content {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.chat .message-input {
+  width: 100%;
+  height: 90px;
+  background-color: #1a1b1e;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.chat .message-input input {
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 4px 0 0 4px;
+  border: 0;
+  padding: 0 10px;
+}
+
+.chat .message-input button {
+  height: 30px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: #4CAF50;
+  border: 0;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 0 4px 4px 0;
+  user-select: none;
+  /* font-weight: bold; */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.chat .message-input button:hover {
+  opacity: 1;
+}
+
+.message.server {
+  color: gray !important;
+}
+
+.top-panel {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background-color: #0f1010;
+}
+
+.game-wrap {
+  padding: 10px 10px 0 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.round {
+  position: absolute;
+  right: 0;
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  height: 100%;
+  width: 180px;
+}
+
+.splash-screen {
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(100% - 10px);
+  background-color: gray;
+  box-sizing: border-box;
+  /* opacity: 0; */
+}
+
+.splash-header {
+  color: #338436;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 60px;
+}
+
+.splash-text {
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+  font-size: 19px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.splash-leaderboard {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.splash-leaderboard table {
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.splash-leaderboard table td {
+  padding: 5px 10px;
+}
+
+.splash-leaderboard table tr td:nth-child(2) {
+  width: 100px;
+  text-align: left;
+}
+
+.splash-leaderboard table tr:nth-child(1) td {
+  background-color: gold;
+}
+
+.splash-leaderboard table tr:nth-child(2) td {
+  background-color: silver;
+}
+
+.splash-leaderboard table tr:nth-child(3) td {
+  background-color: brown;
+}
+
+.next-game {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
